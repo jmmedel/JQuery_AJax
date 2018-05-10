@@ -2,10 +2,9 @@
 
 
 <!-- 
-
-    $("ul li:first")	
-    Selects the first <li> 
-    element of the first <ul>
+    $(":button")	
+    Selects all <button> elements
+     and <input> elements of type="button"
 
 -->
 
@@ -16,29 +15,19 @@
 <script>
 $(document).ready(function(){
     $("button").click(function(){
-        $("ul li:first").hide();
+        $(":button").hide();
     });
 });
 </script>
 </head>
 <body>
 
-<p>List 1:</p>
-<ul>
-  <li>Coffee</li>
-  <li>Milk</li>
-  <li>Tea</li>
-</ul>
+<h2>This is a heading</h2>
 
-<p>List 2:</p>
-<ul>
-  <li>Coffee</li>
-  <li>Milk</li>
-  <li>Tea</li>
-</ul>
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
 
 <button>Click me</button>
 
 </body>
 </html>
-
