@@ -1,0 +1,41 @@
+
+
+
+<!-- 
+    Syntax:
+
+$(selector).hide(speed,callback);
+
+$(selector).show(speed,callback);
+The optional speed parameter specifies the speed of the hiding/showing, and can take the following values: "slow", "fast", or milliseconds.
+
+The optional callback parameter is a function to be executed after the hide() or show() method completes (you will learn more about callback functions in a later chapter).
+
+The following example demonstrates the speed parameter with hide():
+
+
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("p").hide(1000);
+    });
+});
+</script>
+</head>
+<body>
+
+<button>Hide</button>
+
+<p>This is a paragraph with little content.</p>
+<p>This is another small paragraph.</p>
+
+</body>
+</html>
+
