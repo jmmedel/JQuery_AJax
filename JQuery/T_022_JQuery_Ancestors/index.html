@@ -1,0 +1,66 @@
+
+
+<!-- 
+
+    jQuery Traversing - Ancestors
+An ancestor is a parent, grandparent, great-grandparent, and so on.
+
+With jQuery you can traverse up the DOM tree to find ancestors of an element.
+
+Traversing Up the DOM Tree
+Three useful jQuery methods for traversing up the DOM tree are:
+
+parent()
+parents()
+parentsUntil()
+jQuery parent() Method
+The parent() method returns the direct parent element of the selected element.
+
+This method only traverse a single level up the DOM tree.
+
+The following example returns the direct parent element of each <span> elements:
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.ancestors * { 
+    display: block;
+    border: 2px solid lightgrey;
+    color: lightgrey;
+    padding: 5px;
+    margin: 15px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("span").parent().css({"color": "red", "border": "2px solid red"});
+});
+</script>
+</head>
+<body>
+
+<div class="ancestors">
+  <div style="width:500px;">div (great-grandparent)
+    <ul>ul (grandparent)  
+      <li>li (direct parent)
+        <span>span</span>
+      </li>
+    </ul>   
+  </div>
+
+  <div style="width:500px;">div (grandparent)   
+    <p>p (direct parent)
+        <span>span</span>
+      </p> 
+  </div>
+</div>
+
+</body>
+</html>
+
+
+
