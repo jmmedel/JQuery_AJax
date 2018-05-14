@@ -1,14 +1,10 @@
 
 
 
-<!--
+<!-- 
+    The outerWidth(true) method returns the width of an element (includes padding, border, and margin).
 
-   jQuery outerWidth() and outerHeight() Methods
-The outerWidth() method returns the width of an element (includes padding and border).
-
-The outerHeight() method returns the height of an element (includes padding and border).
-
-The following example returns the outer-width/height of a specified <div> element:
+The outerHeight(true) method returns the height of an element (includes padding, border, and margin).
 
 -->
 
@@ -22,8 +18,8 @@ $(document).ready(function(){
         var txt = "";
         txt += "Width of div: " + $("#div1").width() + "</br>";
         txt += "Height of div: " + $("#div1").height() + "</br>";
-        txt += "Outer width of div: " + $("#div1").outerWidth() + "</br>";
-        txt += "Outer height of div: " + $("#div1").outerHeight();
+        txt += "Outer width of div (margin included): " + $("#div1").outerWidth(true) + "</br>";
+        txt += "Outer height of div (margin included): " + $("#div1").outerHeight(true);
         $("#div1").html(txt);
     });
 });
@@ -46,8 +42,8 @@ $(document).ready(function(){
 
 <button>Display dimensions of div</button>
 
-<p>outerWidth() - returns the width of an element (includes padding and border).</p>
-<p>outerHeight() - returns the height of an element (includes padding and border).</p>
+<p>outerWidth(true) - returns the width of an element (includes padding, border, and margin).</p>
+<p>outerHeight(true) - returns the height of an element (includes padding, border, and margin).</p>
 
 </body>
 </html>
