@@ -1,0 +1,47 @@
+
+
+
+<!-- 
+
+jQuery - The noConflict() Method
+What if you wish to use other frameworks on your pages, while still using jQuery?
+
+jQuery and Other JavaScript Frameworks
+As you already know; jQuery uses the $ sign as a shortcut for jQuery.
+
+There are many other popular JavaScript frameworks like: Angular, Backbone, Ember, Knockout, and more.
+
+What if other JavaScript frameworks also use the $ sign as a shortcut?
+
+If two different frameworks are using the same shortcut, one of them might stop working.
+
+The jQuery team have already thought about this, and implemented the noConflict() method.
+
+The jQuery noConflict() Method
+The noConflict() method releases the hold on the $ shortcut identifier, so that other scripts can use it.
+
+You can of course still use jQuery, simply by writing the full name instead of the shortcut:
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$.noConflict();
+jQuery(document).ready(function(){
+    jQuery("button").click(function(){
+        jQuery("p").text("jQuery is still working!");
+    });
+});
+</script>
+</head>
+<body>
+
+<p>This is a paragraph.</p>
+<button>Test jQuery</button>
+
+</body>
+</html>
+
