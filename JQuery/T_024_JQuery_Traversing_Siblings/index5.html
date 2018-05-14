@@ -3,9 +3,10 @@
 
 <!-- 
 
-You can also use an optional parameter to filter the search for siblings.
+jQuery nextUntil() Method
+The nextUntil() method returns all next sibling elements between two given arguments.
 
-The following example returns all sibling elements of <h2> that are <p> elements:
+The following example returns all sibling elements between a <h2> and a <h6> element:
 
 -->
 
@@ -24,7 +25,7 @@ The following example returns all sibling elements of <h2> that are <p> elements
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-    $("h2").siblings("p").css({"color": "red", "border": "2px solid red"});
+    $("h2").nextUntil("h6").css({"color": "red", "border": "2px solid red"});
 });
 </script>
 </head>
@@ -35,11 +36,13 @@ $(document).ready(function(){
   <span>span</span>
   <h2>h2</h2>
   <h3>h3</h3>
+  <h4>h4</h4>
+  <h5>h5</h5>
+  <h6>h6</h6>
   <p>p</p>
 </div>
 
 </body>
 </html>
-
 
 
